@@ -1,0 +1,22 @@
+version: "3.0"
+services: 
+  db:
+    image: mysql:5.7
+    environment: 
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"  
+      MYSQL_USER: cos
+      MYSQL_PASSWORD: cos1234
+      MYSQL_DATABASE: blog
+    volumes:
+      - "./mysqldata:/var/lib/mysql"
+    ports:
+      - "3306:3306"
+    container_name: blog_mysql
+    
+  spring-boot:
+    build: .
+    restart: always
+    links: 
+      - db
+    depends_on: 
+      - db

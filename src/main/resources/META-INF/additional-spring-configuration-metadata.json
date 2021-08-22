@@ -1,0 +1,62 @@
+{"properties": [
+  {
+    "name": "cos.key",
+    "type": "java.lang.String",
+    "description": "A description for 'cos.key'"
+  },
+  {
+    "name": "http.encoding.charset",
+    "type": "java.lang.String",
+    "description": "A description for 'http.encoding.charset'"
+  },
+  {
+    "name": "http.encoding.enable",
+    "type": "java.lang.String",
+    "description": "A description for 'http.encoding.enable'"
+  },
+  {
+    "name": "http.encoding.force",
+    "type": "java.lang.String",
+    "description": "A description for 'http.encoding.force'"
+  },
+  {
+    "name": "file.path",
+    "type": "java.lang.String",
+    "description": "A description for 'file.path'"
+  },
+  {
+    "name": "server.ssl.enable",
+    "type": "java.lang.String",
+    "description": "A description for 'server.ssl.enable'"
+  },
+  {
+    "name": "security.require.ssl",
+    "type": "java.lang.String",
+    "description": "A description for 'security.require.ssl'"
+  },
+  {
+    "name": "tomcat.basedir",
+    "type": "java.lang.String",
+    "description": "A description for 'tomcat.basedir'"
+  },
+  {
+    "name": "tomcat.remote-ip-header",
+    "type": "java.lang.String",
+    "description": "A description for 'tomcat.remote-ip-header'"
+  },
+  {
+    "name": "tomcat.protocol-header",
+    "type": "java.lang.String",
+    "description": "A description for 'tomcat.protocol-header'"
+  },
+  {
+    "name": "tomcat.use-forward-headers",
+    "type": "java.lang.String",
+    "description": "A description for 'tomcat.use-forward-headers'"
+  },
+  {
+    "name": "security.tomcat.basedir",
+    "type": "java.lang.String",
+    "description": "A description for 'security.tomcat.basedir'"
+  }
+]}

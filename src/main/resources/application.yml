@@ -1,0 +1,118 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true  
+      
+spring:
+  profiles:
+    active: production #기본적으로 local/production이 선택된다는 뜻
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: cos
+    password: cos1234
+    
+  servlet: 
+    multipart:
+      enabled: true
+      max-file-size: 128000MB
+      max-request-size: 128000MB
+        
+      
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+http:
+  encoding:
+   charset: UTF-8
+   enable: true
+   force: true
+        
+cos:
+  key: cos1234
+  
+file:
+  path: upload-file/
+
+
+---
+
+spring:
+  profiles: local
+server:
+  port: 8080 # 포트번호 치환
+
+---
+
+# 운영환경만의 설정
+spring:
+  profiles: production
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: cos
+    password: cos1234
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      
+server:
+  port: 8081 # 포트번호 치환(서비스 용)
+
+  
+  
+http:
+  encoding:
+   charset: UTF-8
+   enable: true
+   force: true
+        
+cos:
+  key: cos1234
+  
+file:
+  path: upload-file/
+  
+ffmpeg:
+  path: classpath:ffmpeg/bin/ffmpeg.exe
+
+ffprobe:
+  path: classpath:ffmpeg/bin/ffprobe.exe
+  
+  
+  
+        
